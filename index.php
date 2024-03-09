@@ -1,5 +1,8 @@
 <?php
-// Include database configuration
+session_start();
+if(empty($_SESSION['username'])){
+  header('location:login.php');
+}
 include 'db_connection.php'; // This should contain your database connection code using PDO
 
 // Query to fetch chalet records from the database

@@ -19,9 +19,7 @@
     <li><a href="#news">العروض</a></li>
     <li><a href="register.php">انشاء حساب</a></li>
     <li><a href="login.php">تسجيل الدخول</a></li>
-
     <li><a href="#contact">نبذه عنا</a></li>
-
     <li ><a class="btn btn-success" href="setting.php">تهيئة الموقع</a></li>
  
 
