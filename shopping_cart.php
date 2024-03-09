@@ -27,16 +27,17 @@
                 $stmt->execute([$product_id]);
                 $product = $stmt->fetch(PDO::FETCH_ASSOC);
             }
-            if($table=='farm'){
+            elseif($table=='farm'){
                 $stmt = $pdo->prepare("SELECT * FROM farms WHERE id = ?");
                 $stmt->execute([$product_id]);
                 $product = $stmt->fetch(PDO::FETCH_ASSOC);
             }
-         else{
+         elseif($table=='resorts'){
             $stmt = $pdo->prepare("SELECT * FROM resorts WHERE id = ?");
             $stmt->execute([$product_id]);
             $product = $stmt->fetch(PDO::FETCH_ASSOC);
          }
+         
 
             if($product) {
                 // Product details found, display them
