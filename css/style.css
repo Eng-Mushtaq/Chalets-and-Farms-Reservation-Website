@@ -45,16 +45,12 @@
     background-color: #111;
   }
   
-  .active {
-    background-color: #04AA6D;
-  }
+ 
 #myCarousel{
     width: 100%;
 }
 
-.about_content {
-  padding-right: 60px;
-}
+
 
 .about_content p {
   padding: 18px 0px 30px;
@@ -79,6 +75,10 @@
   color: #777777;
   margin-bottom: 0px;
 }
-/* h2{
-  padding-bottom: 75px;
-} */
+.card-img-top{
+  height: 300px !important;
+}
+.profile{
+  width: 100px !important;
+  height: 100px !important;
+}
