@@ -141,7 +141,7 @@ $resorts = $resorts_stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="col-6"><small class="text-muted"><?php echo $farm['location']; ?></small></div>
                     <div class="col-6"><small class="text-muted">مساحة الوحدة <?php echo $farm['area']; ?> م²</small></div>
                 </div>
-                <a href="shopping_cart.php?product_id=<?php echo $farm['id']; ?>&table=farm" class="btn btn-primary">احجز الآن</a>
+                <a href="shopping_cart.ph p?product_id=<?php echo $farm['id']; ?>&table=farm" class="btn btn-primary">احجز الآن</a>
 
             </div>
         <?php else: ?>
