@@ -63,40 +63,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div class="input-group border border-dark px-1 rounded bg-white">
                         <input type="text" name="name" class="form-control border-0">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text bg-white border-0">
-                            </div>
-                        </div>
+                       
                     </div>
                     <div class="list-unstyled mb-0">
                         <span class="m-2">البريد الإلكتروني</span>
                     </div>
                     <div class="input-group border border-dark px-1 rounded bg-white">
                         <input type="email" name="email" class="form-control border-0">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text bg-white border-0">
-                            </div>
-                        </div>
+                       
                     </div>
                     <div class="list-unstyled mb-0">
                         <span class="m-2"> رقم الهاتف</span>
                     </div>
                     <div class="input-group border border-dark px-1 rounded bg-white">
                         <input type="tel" name="phone" class="form-control border-0">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text bg-white border-0">
-                            </div>
-                        </div>
+                        
                     </div>
                     <div class="list-unstyled d-flex align-items-center my-0">
                         <span class="m-2">كلمة المرور</span>
                     </div>
                     <div class="input-group border border-dark px-1 rounded bg-white">
                         <input type="password" name="password" class="form-control border-0">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text bg-white border-0">
-                            </div>
-                        </div>
+                       
                     </div>
                     <div class=" d-flex align-items-center flex-column">
                         <button type="submit" class="btn btn-md bg-primary my-3 text-white fw-bolder btn-login"> تسجيل الحساب </button>

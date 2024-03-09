@@ -91,10 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 <div class="input-group border border-dark px-1 rounded bg-white">
                     <input type="email" name="email" class="form-control border-0">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text bg-white border-0">
-                        </div>
-                    </div>
+                   
                 </div>
 
                 <div class="list-unstyled d-flex align-items-center my-0">
@@ -102,10 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 <div class="input-group border border-dark px-1 rounded bg-white">
                     <input type="password" name="password" class="form-control border-0">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text bg-white border-0">
-                        </div>
-                    </div>
+                 
                 </div>
               
 
