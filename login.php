@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </style>
 </head>
 <body class="container d-lg-flex justify-content-center py-1">
-    <div class="col-12 col-md-4 p-2 border border-dark rounded-2" id="main">
+    <div class="col-12 col-md-4 p-2 border border-dark alert alert-info  rounded-2" id="main">
         <div class="row m-0">
             <div class="col-12 bg-hint rounded-top-2 d-flex flex-column justify-content-center align-items-center">
                 <h2 class="text-center txt-app d-inline"> تسجيل الدخول </h2>
@@ -93,7 +93,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <input type="email" name="email" class="form-control border-0">
                     <div class="input-group-prepend">
                         <div class="input-group-text bg-white border-0">
-                            <i class="fa fa-envelope text-pinky"></i>
                         </div>
                     </div>
                 </div>
@@ -105,7 +104,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <input type="password" name="password" class="form-control border-0">
                     <div class="input-group-prepend">
                         <div class="input-group-text bg-white border-0">
-                            <i class="fa fa-lock text-pinky"></i>
                         </div>
                     </div>
                 </div>
@@ -120,11 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="bg-danger text-white rounded p-2" id="error">
                      <span class="fw-bold"><?php echo $_SESSION['error']; ?></span>
                     </div>
-               
-                <?php elseif (isset($_SESSION['success']) && !empty($_SESSION['success'])): ?>
-                    <div class="bg-success text-white rounded p-2" id="error">
-                     <span class="fw-bold"><?php echo $_SESSION['success']; ?></span>
-                    </div>
+              
                 <?php endif; ?>
 
                 </form>
