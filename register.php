@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </head>
 <body class="container d-lg-flex justify-content-center py-1">
-    <div class="col-12 col-md-4 p-2 border border-dark rounded-2" id="main">
+    <div class="col-12 col-md-4 p-2 border border-dark alert alert-info rounded-2" id="main">
         <div class="row m-0">
             <div class="col-12 bg-hint rounded-top-2 d-flex flex-column justify-content-center align-items-center">
                 <h2 class="text-center txt-app d-inline"> تسجيل حساب جديد </h2>
@@ -63,48 +63,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div class="input-group border border-dark px-1 rounded bg-white">
                         <input type="text" name="name" class="form-control border-0">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text bg-white border-0">
-                                <i class="fa fa-user text-pinky"></i>
-                            </div>
-                        </div>
+                       
                     </div>
                     <div class="list-unstyled mb-0">
                         <span class="m-2">البريد الإلكتروني</span>
                     </div>
                     <div class="input-group border border-dark px-1 rounded bg-white">
                         <input type="email" name="email" class="form-control border-0">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text bg-white border-0">
-                                <i class="fa fa-envelope text-pinky"></i>
-                            </div>
-                        </div>
+                       
                     </div>
                     <div class="list-unstyled mb-0">
                         <span class="m-2"> رقم الهاتف</span>
                     </div>
                     <div class="input-group border border-dark px-1 rounded bg-white">
                         <input type="tel" name="phone" class="form-control border-0">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text bg-white border-0">
-                                <i class="fa fa-phone text-pinky"></i>
-                            </div>
-                        </div>
+                        
                     </div>
                     <div class="list-unstyled d-flex align-items-center my-0">
                         <span class="m-2">كلمة المرور</span>
                     </div>
                     <div class="input-group border border-dark px-1 rounded bg-white">
                         <input type="password" name="password" class="form-control border-0">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text bg-white border-0">
-                                <i class="fa fa-lock text-pinky"></i>
-                            </div>
-                        </div>
+                       
                     </div>
                     <div class=" d-flex align-items-center flex-column">
                         <button type="submit" class="btn btn-md bg-primary my-3 text-white fw-bolder btn-login"> تسجيل الحساب </button>
-                        <a href="login.php" class="fw-bolder text-pinky mt-2 text-decoration-none"> لديك حساب بالفعل ؟ </a>
+                        <a href="login.php" class="fw-bolder text-pinky mt-2 text-decoration-none"> لديك حساب  ؟ </a>
                     </div>
                     <?php if (isset($_SESSION['error']) && !empty($_SESSION['error'])): ?>
                         <div class="bg-danger text-white rounded p-2" id="error">
