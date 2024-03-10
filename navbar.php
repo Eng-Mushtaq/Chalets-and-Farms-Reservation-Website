@@ -13,10 +13,9 @@
   </div>
   <ul>
     <li><a href="#home">الرئيسية</a></li>
-    <li><a href="#news">الشاليهات</a></li>
-    <li><a href="#contact">المزارع</a></li>
-    <li><a href="#home">المنتجعات</a></li>
-    <li><a href="#news">العروض</a></li>
+    <li><a href="#chalets">الشاليهات</a></li>
+    <li><a href="#farms">المزارع</a></li>
+    <li><a href="#resorts">المنتجعات</a></li>
     <li><a href="register.php">انشاء حساب</a></li>
     <li><a href="login.php">تسجيل الدخول</a></li>
     <li><a href="#contact">نبذه عنا</a></li>

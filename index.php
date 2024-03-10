@@ -92,8 +92,8 @@ $resorts = $resorts_stmt->fetchAll(PDO::FETCH_ASSOC);
       <h2 class="title_color">الشاليهات</h2>
       <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from </p>
   </div>
-    <div class="container-fluid">
-    <div class="card-group row m-0 ">
+    <div class="m-3">
+    <div class="card-group row m-0 " id="chalets">
     <?php foreach ($chalets as $chalet): ?>
       <div class="col-lg-4 col-md-6 p-0 my-1">
     <div class="card m-1">
@@ -121,8 +121,8 @@ $resorts = $resorts_stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
   </section>
 
-  <section class="about_history_area section_gap">
-    <div class="container">
+  <section class="about_history_area section_gap" id="farms">
+    <div class="m-3">
       <div class="section_title text-center">
         <h2 class="title_color">المزارع</h2>
         <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from </p>
@@ -176,8 +176,8 @@ $resorts = $resorts_stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
   </section>
 
-  <section class="latest_blog_area section_gap">
-    <div class="container">
+  <section class="latest_blog_area section_gap" id="resorts">
+    <div class="m-3">
         <div class="section_title text-center">
             <h2 class="title_color">المنتجعات</h2>
             <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from </p>
