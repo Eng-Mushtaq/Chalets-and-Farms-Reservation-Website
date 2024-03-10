@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="m-3">
         <?php
         // Include your database connection file
         include 'db_connection.php'; // Change 'db_connection.php' to the actual name of your database connection script
