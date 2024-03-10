@@ -12,7 +12,7 @@ include 'db_connection.php'; // Change 'db_connection.php' to the actual name of
         $sql = "INSERT INTO bookings (user_id, item_id, item_type, date) VALUES (?, ?, ?, ?)";
         $stmt = $pdo->prepare($sql);
         if ($stmt->execute([$user_id, $product_id, $type, $date])) {
-            header('location: success.php?');
+            header('location: success.php');
             exit; // Ensure script execution stops after redirection
         } else {
             echo "Error inserting data into the bookings table.";

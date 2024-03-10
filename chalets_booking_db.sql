@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2024 at 03:04 AM
+-- Generation Time: Mar 10, 2024 at 02:45 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -32,7 +32,7 @@ CREATE TABLE `bookings` (
   `user_id` int(11) DEFAULT NULL,
   `date` date DEFAULT NULL,
   `item_id` int(11) DEFAULT NULL,
-  `item_type` int(11) DEFAULT NULL,
+  `item_type` varchar(11) DEFAULT NULL,
   `state` int(11) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -41,15 +41,11 @@ CREATE TABLE `bookings` (
 --
 
 INSERT INTO `bookings` (`id`, `user_id`, `date`, `item_id`, `item_type`, `state`) VALUES
-(5, 0, '2024-03-09', 1, 0, 1),
-(6, 0, '2024-03-09', 1, 0, 1),
-(7, 0, '2024-03-09', 1, 0, 1),
-(8, 0, '2024-03-09', 2, 0, 1),
-(9, 0, '2024-03-09', 2, 0, 1),
-(10, 0, '2024-03-09', 1, 0, 1),
-(11, 0, '2024-03-09', 2, 0, 1),
-(12, 0, '2024-03-09', 2, 0, 1),
-(13, 0, '2024-03-09', 2, 0, 1);
+(25, 2, '2024-03-10', 1, 'chalets', 1),
+(26, 2, '2024-03-10', 4, 'chalets', 1),
+(27, 2, '2024-03-10', 2, 'farm', 1),
+(28, 2, '2024-03-10', 2, 'resorts', 1),
+(29, 2, '2024-03-10', 1, 'resorts', 1);
 
 -- --------------------------------------------------------
 
@@ -74,10 +70,10 @@ CREATE TABLE `chalets` (
 --
 
 INSERT INTO `chalets` (`id`, `image_url`, `title`, `description`, `price`, `location`, `unit_area`, `accommodation_type`, `created_at`) VALUES
-(1, 'images/uploads/ch3.webp', 'شاليه بهز عباس', 'لا يوجد وصف إضافي', 20000.00, 'ذمار', '4*4', '1', '2024-03-02 15:03:33'),
-(2, 'images/uploads/ch2.webp', 'شاليه بهز عباس 2', ' يوجد وصف إضافي', 100.00, 'ذمار', '4*4', '1', '2024-03-02 15:11:23'),
-(3, 'images/uploads/ch3.jpeg', 'شاليه مشتاق', ' يوجد وصف إضافي', 500.00, 'عتمة', '5*5', 'عائلي', '2024-03-02 18:18:37'),
-(4, 'images/uploads/bg3.jpg', 'شاليه 1', 'شاليه رقم 1', 200.00, 'ذمار', '5*5', 'عائلي', '2024-03-02 20:31:03');
+(1, 'images/uploads/ch3.webp', 'الاطلالة بتيماء', 'شالية بطابع فندق يوفر جميع احتياجاتكم و راحتكم كما نتميز بالاطلالة على المسبح من الصالة العائلية.\n\n', 20000.00, 'تيماء', '4*4', 'مخصص ل عوائل و عزاب\n', '2024-03-02 15:03:33'),
+(2, 'images/uploads/ch2.webp', 'شاليهات ذا كورنر\n', ' يوجد وصف إضافي', 100.00, 'تيماء - حي التجاري\n', '4*4', '1', '2024-03-02 15:11:23'),
+(3, 'images/uploads/ch3.jpeg', 'شاليه مشتاق', ' يوجد وصف إضافي', 500.00, 'الرياض', '5*5', 'عائلي', '2024-03-02 18:18:37'),
+(4, 'images/uploads/bg3.jpg', 'شاليه بمجلس وجلسة خارجية\n', 'شاليه رقم 1', 200.00, 'الرياض', '5*5', 'عائلي', '2024-03-02 20:31:03');
 
 -- --------------------------------------------------------
 
@@ -172,7 +168,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `profile_path`, `phone`, `usertype`) VALUES
-(0, 'Bahz Abbas', 'bahz@gmail.com', '$2y$10$2Sb6PZan5taPPsfdwBft3.rwYITS/YEUgalXRGulrDgpypk00.Q86', NULL, '017162150', 0);
+(1, 'Bahz Abbas', 'bahz@gmail.com', '$2y$10$2Sb6PZan5taPPsfdwBft3.rwYITS/YEUgalXRGulrDgpypk00.Q86', NULL, '017162150', 0),
+(2, 'Bahz Abbas', 'bahzabbas@gmail.com', '$2y$10$ab1ji0AgPxrpN.FhD9hr8eM.t3W6240sMjoiU4jGnaCAD8KyoSY9a', NULL, '017162150', 0);
 
 --
 -- Indexes for dumped tables
@@ -203,6 +200,12 @@ ALTER TABLE `resorts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -210,7 +213,7 @@ ALTER TABLE `resorts`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `chalets`
@@ -229,6 +232,12 @@ ALTER TABLE `farms`
 --
 ALTER TABLE `resorts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

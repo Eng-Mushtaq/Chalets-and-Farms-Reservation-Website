@@ -23,7 +23,7 @@
                     echo '<p class="mb-0">شكراَ لك !</p>';
                 
                 ?>
-                 <button class="btn btn-success text-white" onclick="goBack()">موافق</button>
+                 <a href="cart.php" class="btn btn-success text-white">موافق</a>
             </div>
         </div>
     </div>

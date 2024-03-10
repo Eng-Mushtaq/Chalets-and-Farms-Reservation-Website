@@ -37,7 +37,7 @@
             $stmt->execute([$product_id]);
             $product = $stmt->fetch(PDO::FETCH_ASSOC);
          }
-         
+
 
             if($product) {
                 // Product details found, display them
@@ -92,31 +92,7 @@
         ?>
     </div>
 </body>
-<!-- <script>
-    var totalPriceInput = document.getElementById('totalprice');
-    var price = <?php echo $product['price']; ?>;
-    var quantityInput = document.getElementById('quantity');
-    var plusButton = document.getElementById('plus');
-    var minusButton = document.getElementById('minus');
 
-    plusButton.addEventListener('click', function() {
-        calculate(1);
-    });
-
-    minusButton.addEventListener('click', function() {
-        calculate(-1);
-    });
-
-    function calculate(change) {
-        var quantity = parseInt(quantityInput.value);
-        quantity += change;
-        if (quantity < 1) {
-            quantity = 1; // Ensure quantity doesn't go below 1
-        }
-        quantityInput.value = quantity;
-        totalPriceInput.textContent = price * quantity; // Update total price
-    }
-</script> -->
 
 
 </html>
